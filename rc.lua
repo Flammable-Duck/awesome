@@ -236,19 +236,19 @@ globalkeys = gears.table.join(
     ),
 -- Screenshots
 awful.key({}, "Print", function ()
-awful.spawn.with_shell("scrot ~Screenshots/Screenshot_%Y%m%d_%H%M%S.png", false) end,
+awful.spawn.with_shell("scrot  ~/Screenshots/Screenshot_%Y%m%d_%H%M%S.png", false) end,
 {description = "Print desktop", group = "Screenshot"}),
 
 awful.key({ modkey }, "Print", function ()
-awful.spawn.with_shell("scrot -u ~/Imagens/Screenshots/Screenshot_%Y%m%d_%H%M%S.png", false) end,
+awful.spawn.with_shell("scrot -u ~/Screenshots/Screenshot_%Y%m%d_%H%M%S.png", false) end,
 {description = "Print window", group = "Screenshot"}),
 
 awful.key({ "Shift" }, "Print", nil, function ()
-awful.spawn.with_shell("scrot -s ~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S.png", false) end,
+awful.spawn.with_shell("scrot -s ~/Screenshots/Screenshot_%Y%m%d_%H%M%S.png", false) end,
 {description = "Print area", group = "Screenshot"}),
 
 awful.key({ "Control" }, "Print", nil, function ()
-awful.spawn.with_shell("scrot -s /tmp/Screenshot_%Y%m%d_%H%M%S.png -e 'xclip -selection c -t image/png < $f'", false) end,
+awful.spawn.with_shell("scrot -e 'xclip -selection c -t image/png < $f'", false) end,
 {description = "Print area to clipboard", group = "Screenshot"}),
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
