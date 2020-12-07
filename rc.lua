@@ -193,17 +193,21 @@ awful.screen.connect_for_each_screen(function(s)
             s.mytaglist,
             s.mypromptbox,
         },
-        s.mytasklist, -- Middle widget
+        nil, -- Middle widget
 	{ -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
+	    layout = wibox.layout.fixed.horizontal,
+	    wibox.widget.systray(),
+	    margin,
 	    volume_widget({display_notification = true}),
             battery_widget(),
-	    wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
         },
     }
 end)
+
+-- spacing
+
 -- }}}
 -- {{{ Mouse bindings
 root.buttons(awful.util.table.join(
@@ -273,6 +277,8 @@ awful.spawn.with_shell("scrot -e 'xclip -selection c -t image/png < $f'", false)
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
+    awful.key({modkey,	"Shift"   }, "Return", function () awful.spawn("cool-retro-term") end,
+    	      {discription = "open cool retro term", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -332,6 +338,8 @@ clientkeys = gears.table.join(
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
+	    myscreen = awful.screen.focused()
+            myscreen.mywibox.visible = not myscreen.mywibox.visible
         end,
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
@@ -530,7 +538,6 @@ client.connect_signal("request::titlebars", function(c)
             awful.mouse.client.resize(c)
         end)
     )
-
     awful.titlebar(c) : setup {
         { -- Left
             awful.titlebar.widget.iconwidget(c),
@@ -563,5 +570,5 @@ awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("")
-awful.spawn.with_shell("alacritty")
+awful.spawn.with_shell("")
 awful.spawn.with_shell("")
