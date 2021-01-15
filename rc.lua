@@ -51,7 +51,7 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "mytheme.lua")
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty"
 editor = os.getenv("nvim") or "atom"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -85,7 +85,7 @@ awful.layout.layouts = {
 
 
 -- Menubar configuration
-menubar.utils.terminal = alacritty -- Set the terminal for applications that require it
+menubar.utils.terminal = kitty -- Set the terminal for applications that require it
 -- }}}
 
 -- Keyboard map indicator and switcher
