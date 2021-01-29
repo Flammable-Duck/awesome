@@ -504,7 +504,7 @@ awful.rules.rules = {
        properties = { screen = 1, tag = "2" } },
      { rule = { class = "Discord" },
        properties = { screen = 1, tag = "3" } },
-     { rule = { class = "vlc" },
+     { rule = { class = "Music" },
        properties = { screen = 1, tag = "5" } },
 }
 

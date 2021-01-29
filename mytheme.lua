@@ -13,7 +13,7 @@ local theme = {}
 
 theme.font          = "terminus 10"
 
-theme.bg_normal     = "#282a36"
+theme.bg_normal     = "#000000"
 theme.bg_focus      = "#44475a"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
