@@ -2,20 +2,11 @@ My awesomewm configs, absolute shit lol.
 
 I am working on making this slightly less absolute shit.
 
-# Dependencies:
+Run setup.sh to get the widgets, and install some programs used by awesome
 
-Run getwidgets.sh to get the widgets
+clone my [wallpaper directory](https://github.com/Flammable-Duck/wallpapers) if you want my wallpapers
 
-Install the Kitty terminal
-
-Install the terminus font
-
-Install Nitrogen to set the wallpaper
-
-clone my [wallpaper directory](https://github.com/Flammable-Duck/wallpapers) if you want my wallpaper
-
-install scrot for screenshots
-
+you should probably use the Dracula theme with this.
 
 ![](https://raw.githubusercontent.com/Flammable-Duck/awesome/main/Screenshot_1.png)
 ![](https://raw.githubusercontent.com/Flammable-Duck/awesome/main/Screenshot_2.png)
