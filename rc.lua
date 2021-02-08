@@ -1,5 +1,3 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
@@ -7,7 +5,7 @@ local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
-local wibox = require("wibox")
+--local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -467,10 +465,16 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 
+-- Adds an empty wibar under my polybar so that the workarea changes
+--awful.wibar {
+--      position = 'top',
+--      height   = 23,
+--  }
+
 -- Autorun
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("")
+awful.spawn.with_shell("/home/duck/.config/awesome/polybar.sh")
 awful.spawn.with_shell("")
 awful.spawn.with_shell("")
