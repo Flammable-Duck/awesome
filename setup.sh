@@ -9,6 +9,5 @@ cp -r volume-widget ../volume-widget
 git clone https://github.com/horst3180/arc-icon-theme --depth 1 && cd arc-icon-theme
 ./autogen.sh --prefix=/usr
 sudo make install
-#installing applications
-echo installing appliations used...
-sudo pacman -S kitty dmenu nitrogen scrot terminus-font
+git clone https://github.com/lcpz/awesome-freedesktop.git
+git clone https://github.com/lcpz/lain.git
