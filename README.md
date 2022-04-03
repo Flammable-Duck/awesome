@@ -1,6 +1,6 @@
 My awesomewm configs, absolute shit lol.
 
-I am working on making this slightly less absolute shit.
+~~I am working on making this slightly less absolute shit.
 
 Run setup.sh to get the widgets, and install some programs used by awesome (read the script before you run, dont be a dingus)
 
